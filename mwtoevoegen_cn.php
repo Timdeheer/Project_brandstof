@@ -1,6 +1,7 @@
 <?php
   $con = mysqli_connect("localhost","root","");
 
+
   if (!$con)
   {
     die('Could not connect: ' . mysqli_error());
@@ -22,13 +23,12 @@
   $rol = mysqli_real_escape_string($con, $rol);
   $locatie = mysqli_real_escape_string($con, $locatie);
 
-  
+
   $wachtwoord = password_hash($wachtwoord, PASSWORD_BCRYPT);
 
-  $query = mysqli_query($con, "INSERT INTO gebruikers (gebruikersnaam, wachtwoord, naam, achternaam, rol, locatie) 
+  $query = mysqli_query($con, "INSERT INTO gebruikers (gebruikersnaam, wachtwoord, naam, achternaam, rol, locatie)
     VALUES ('$gebruikersnaam', '$wachtwoord', '$naam', '$achternaam', '$rol', '$locatie')") or die(mysqli_error($con));
 
-  echo "<h2>gebruiker is toegevoegd</h2>"; 
+  echo "<h2>gebruiker is toegevoegd</h2>";
 header( "Refresh:1; url=mwtoevoegen.php", true, 303);
   ?>
-
