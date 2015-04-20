@@ -15,7 +15,7 @@ $id = $_SESSION["id"];
 $naam = $_SESSION["naam"];
 $functie = $_SESSION["functie"];
 $locatie = $_SESSION["locatie"];
-
+//comment test repo fork door stefano
     include 'connectie.php';
 
     echo "<table>";
