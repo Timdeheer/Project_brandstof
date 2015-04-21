@@ -12,7 +12,7 @@
 
 <?php
 include 'header.php';
-session_start();    
+session_start();
 $locatie = $_SESSION["locatie"];
 
 ?>
@@ -20,10 +20,10 @@ $locatie = $_SESSION["locatie"];
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-2 col-md-2 col-sm-2">
 
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-8 col-md-8 col-sm-8">
 
             <a href="filiaalpagina.php">terug naar menu</a>
             <h2>Medewerker toevoegen</h2></br>
@@ -132,6 +132,8 @@ $locatie = $_SESSION["locatie"];
 
 
     </table>
+</div>
+    <div class="col-lg-2 col-md-2 col-sm-2"></div></div>
 </body>
 <footer>
 </footer>
