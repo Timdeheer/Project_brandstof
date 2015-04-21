@@ -25,7 +25,7 @@ $locatie = $_SESSION["locatie"];
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8">
 
-            <a href="filiaalpagina.php">terug naar menu</a>
+            
 
             <form class="form-horizontal" action="mwtoevoegen_cn.php" method="post">
 
