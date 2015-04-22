@@ -26,11 +26,12 @@ $locatie = $_SESSION["locatie"];
         <div class="col-lg-8 col-md-8 col-sm-8">
 
 
+
             <form class="form-horizontal" action="mwtoevoegen_cn.php" method="post">
 
 
                             <div class="form-group ">
-                                <h2 >Medewerker toevoegen</h2></br>
+                            <h2>Medewerker toevoegen</h2></br>
                             <label for="gebruikersnaam"><h5><b>Gebruikersnaam</b></h5></label>
                             <input type="text" class="form-control" name="gebruikersnaam" id="gebruikersnaam" autocomplete="off">
 
