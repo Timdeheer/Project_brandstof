@@ -25,7 +25,6 @@ $locatie = $_SESSION["locatie"];
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8">
 
-            
 
             <form class="form-horizontal" action="mwtoevoegen_cn.php" method="post">
 

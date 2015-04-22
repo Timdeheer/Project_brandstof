@@ -33,7 +33,6 @@ include 'header.php'
 
 </div>
 
-
 <footer>
 
 </footer>

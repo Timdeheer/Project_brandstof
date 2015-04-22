@@ -9,7 +9,7 @@ session_start();
 </style>
 
 <?php
-
+include 'header.php';
 $username = $_SESSION["gebruikersnaam"];
 $id = $_SESSION["id"];
 $naam = $_SESSION["naam"];
@@ -21,7 +21,6 @@ $locatie = $_SESSION["locatie"];
     echo "<table>";
 
     $result = mysqli_query($con, "SELECT * FROM locatietext WHERE locatie = ".$locatie);
-    echo "<a href='beheer.php'>back to menu</a>";
     echo "<tabel>";
 
 
@@ -76,7 +75,7 @@ $locatie = $_SESSION["locatie"];
 
         $tekst = $_POST['tekst'];
 
-        $query = mysqli_query($con, "UPDATE tekst SET tekst='$tekst' WHERE id = '$id_wijzigen'");
+        $query = mysqli_query($con, "UPDATE locatietext SET tekst='$tekst' WHERE id = '$id_wijzigen'");
 
 
         header("location:content.php");
