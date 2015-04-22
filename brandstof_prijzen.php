@@ -30,10 +30,11 @@ $rol = $_SESSION["rol"];
                 </br>
 <tr><input placeholder="Voer hier de nieuwe prijs in.." class="form-control" style="<?php echo '' ?>" type="text" name="prijzen"></td></tr>
 
-
+</div>
 </table>
 </br>
 <input class="btn btn-success" type="submit" name="submit" value="verzenden" >
+    </form>
 <?php
 if(isset($_POST['submit'])){
     // MySQL stuff goes here
@@ -48,7 +49,7 @@ window.location = "brandstof_prijzen.php"
 }
 ?>
 </div>
-</form>
+
 
 
 
@@ -75,7 +76,7 @@ if (isset($_POST['submit'])) {
 
 
 
-	$query = "INSERT INTO `fuel` (`locatie_id`, `brandstof`, `prijzen`, `datum`)
+	$query = "INSERT INTO fuel (locatie_id, brandstof, prijzen, datum)
 	VALUES ('$locatie_id', '$brandstof', '$prijzen', CURRENT_TIMESTAMP )";
 //    $query_update_prijzen = "UPDATE `fuel` SET ($locatieid = `locatie_id`, $brandstof = `brandstof`, $prijzen = `prijzen`) WHERE            $locatieid =`locatie_id`  ";
 
