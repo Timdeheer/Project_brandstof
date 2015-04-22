@@ -1,16 +1,10 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 <!doctype html>
 <html>
-<style>
-.recente_prijzen, td{
-    border: 1px solid black;
-}
-.recente_prijzen {
-    float:right;
-}
-thead {
-    font-weight:bold;
-}
-</style>
+
 <head>
 <meta charset="utf-8">
 <title>Brandstof prijzen aanpassen</title>
@@ -22,7 +16,11 @@ thead {
 <tr><td>Recente prijzen</td></tr>
 </thead>
 <tbody>
+<<<<<<< HEAD
 <tr><td>
+=======
+<tr><td></td></tr></tbody></table>
+>>>>>>> origin/master
 <?php
 include 'connectie.php';
 $locatie_id = '2';
@@ -109,7 +107,7 @@ if (isset($_POST['submit'])) {
 
 
 
-	$query = "INSERT INTO `fuel` (`locatie_id`, `brandstof`, `prijzen`, `datum`)
+	$query = "INSERT INTO fuel (locatie_id, brandstof, prijzen, datum)
 	VALUES ('$locatie_id', '$brandstof', '$prijzen', CURRENT_TIMESTAMP )";
 //    $query_update_prijzen = "UPDATE `fuel` SET ($locatieid = `locatie_id`, $brandstof = `brandstof`, $prijzen = `prijzen`) WHERE            $locatieid =`locatie_id`  ";
 
@@ -123,3 +121,61 @@ if (isset($_POST['submit'])) {
 
 
 ?>
+<<<<<<< HEAD
+=======
+</div>
+
+
+
+
+    <div class="col-lg-4 col-md-2 col-sm-4">
+<table class="recente_prijzen">
+<thead>
+<tr><td>Recente prijzen</td></tr>
+</thead>
+<tbody>
+<tr><td>
+<?php
+include 'connectie.php';
+$locatie_id = $locatie;
+$results = $con->query("SELECT * FROM fuel WHERE brandstof='DIESEL' AND locatie_id='$locatie_id' ORDER BY datum DESC LIMIT 1");
+if($row = $results->num_rows > 0) {
+    while($row = $results->fetch_object()) {
+      echo $row->brandstof." ".$row->prijzen." ";
+    }
+}
+?>
+</td></tr>
+
+<tr><td>
+<?php
+$results = $con->query("SELECT * FROM fuel WHERE brandstof='EURO95' AND locatie_id='$locatie_id' ORDER BY datum DESC LIMIT 1");
+if($row = $results->num_rows > 0) {
+    while($row = $results->fetch_object()) {
+      echo $row->brandstof." ".$row->prijzen." ";
+    }
+}
+?>
+</td></tr>
+<tr><td>
+<?php
+$results = $con->query("SELECT * FROM fuel WHERE brandstof='LPG' AND locatie_id='$locatie_id' ORDER BY datum DESC LIMIT 1");
+if($row = $results->num_rows > 0) {
+    while($row = $results->fetch_object()) {
+      echo $row->brandstof." ".$row->prijzen." ";
+    }
+}
+?>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-2" col-md-2 col-sm-2>RECHTS</div>
+
+
+
+
+</div>
+</body>
+</html>
+>>>>>>> origin/master
