@@ -31,7 +31,11 @@ $locatie = $_SESSION["locatie"];
 
 
                             <div class="form-group ">
+<<<<<<< HEAD
                             <h2>Medewerker toevoegen</h2></br>
+=======
+                                <h2 class="text-left" >Medewerker toevoegen</h2></br>
+>>>>>>> origin/master
                             <label for="gebruikersnaam"><h5><b>Gebruikersnaam</b></h5></label>
                             <input type="text" class="form-control" name="gebruikersnaam" id="gebruikersnaam" autocomplete="off">
 
