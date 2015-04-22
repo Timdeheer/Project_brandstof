@@ -24,8 +24,8 @@ if(in_array($extension, $allowedExts))
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "upload/" . $_FILES["file"]["name"]);
       echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
-	  
-	  $db = new mysqli("localhost", "root", "", "christmasList");
+
+	  $db = new mysqli("localhost", "root", "", "brandstof");
 	  $result = mysqli_query($db, "INSERT INTO producten VALUES (NULL, '".$_POST['naam']."', '".$_FILES["file"]["name"]."', '".$_POST['catagory']."', '".$_POST['prijs']."')");
       }
     }

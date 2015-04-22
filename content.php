@@ -34,6 +34,7 @@ $locatie = $_SESSION["locatie"];
 
         echo "<td>";
         echo $row["tekst"];
+        echo "</br></br>";
 
         echo "</td>";
         echo "<td>";
@@ -52,6 +53,7 @@ $locatie = $_SESSION["locatie"];
         $result2 = mysqli_query($con, "SELECT * FROM locatietext WHERE id = ".$id);
         $row2 = mysqli_fetch_array($result2);
         ?>
+    </br>
         <form action="#" method="post">
             <table>
                 <tr>
@@ -62,7 +64,9 @@ $locatie = $_SESSION["locatie"];
 
                 <tr>
 
+
                     <td>
+                    </br>
                 <button type="submit" name="update" value="<?php $row2['id'] ?>" class="btn btn-success btn-xs">Wijzigen</button>
 
                     </td>
