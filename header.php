@@ -39,8 +39,8 @@ include 'connectie.php'
                             <li><a href="mwtoevoegen.php">Medewerker toevoegen</a></li>
                             <li><a href="content.php">Content veranderen</a></li>
                             <li><a href="product_toevoegen.php">Shop</a></li>
-                            <li><a href="openingstijdenshop.php">openingstijden pomp</a></li>
-                            <li><a href="brandstof_prijzen.php">prijzen toevoegen</a></li>
+                            <li><a href="openingstijdenshop.php">Openingstijden pomp</a></li>
+                            <li><a href="brandstof_prijzen.php">Prijzen toevoegen</a></li>
                             <li><div class=""></div><a href="uitloggen.php"><button name="submit" type="submit" value="Logout" class="btn btn-success btn-xs">Uitloggen</button></a></li>
 
                         </ul>

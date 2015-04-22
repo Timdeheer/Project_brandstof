@@ -123,17 +123,7 @@ include 'beheerindex.php';
 
 
                 ?>
-                <?php
-                if (mysqli_query($con, $query)) {
-                    echo "<div class='alert alert-success' role='alert'><strong>Succes!</strong> Uw aanpassing is doorgevoerd!</div>";
-                    header('Location: account_wijzigen.php');
-                } else {
-                    echo "<div class='alert alert-danger' role='alert'><strong>Oeps!</strong> Uw aanpassing is niet doorgevoerd!</div>" . mysqli_error($con);
-                }
-                ?>
-<!--                <script type="text/javascript">-->
-<!--                    window.location = "account_wijzigen.php"-->
-<!--                </script>-->
+
             <?php
             }
 
