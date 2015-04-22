@@ -1,15 +1,13 @@
 <?php
-session_start();
-//if($_SESSION['functie'] == "1"){
+include '../connectie.php';
+include 'headercmsadmin.php';
+include 'beheerindex.php';
 
-
-
-if (!isset($_SESSION)) {
-    
-}
+if($_SESSION['functie'] == "1"){
+  echo "<div class='content-display'>";
 ?>
 
-<a href="beheer.php">terug naar menu</a>
+
 <h1>Account aanmaken</h1>
 <form action="registratie_cn.php" method="post">
     <table>
@@ -17,7 +15,7 @@ if (!isset($_SESSION)) {
             <td>
                 Gebruikersnaam:
             </td>
-            <td>	
+            <td>
                 <input type="text" name="gebruikersnaam" id="gebruikersnaam">
             </td>
         </tr>
@@ -54,7 +52,7 @@ if (!isset($_SESSION)) {
 
 
                 <?php
-                include 'connectie.php';
+
                 $sql = "SELECT * FROM rolmedewerker";
                 $result = mysqli_query($con, $sql);
 
@@ -63,15 +61,15 @@ if (!isset($_SESSION)) {
                      ?><select name="rol" id="rol">
                          <?php
                     while ($row = mysqli_fetch_object($result)) { ?>
-               
+
                     <option value="<?php echo $row->id;  ?>"><?php echo $row->naam;  ?></option>
-                
+
                         <?php
                     }
                     echo "</select>";
                 }
                 ?>
-                
+
             </td>
         </tr>
         <tr>
@@ -83,7 +81,7 @@ if (!isset($_SESSION)) {
 
 
                 <?php
-                include 'connectie.php';
+
                 $sql = "SELECT * FROM locaties";
                 $result = mysqli_query($con, $sql);
 
@@ -92,30 +90,36 @@ if (!isset($_SESSION)) {
                      ?><select name="locatie" id="locatie">
                          <?php
                     while ($row = mysqli_fetch_object($result)) { ?>
-               
+
                     <option value="<?php echo $row->id;  ?>"><?php echo $row->naam;  ?></option>
-                
+
                         <?php
                     }
                     echo "</select>";
                 }
                 ?>
-                
+
             </td>
-            
+
         </tr>
 
         <tr>
-            <td>	
+            <td>
             </td>
             <td>
                 <input type="submit" value="aanmaken">
             </td>
         </tr>
+      </div>
     </table>
     <?php
-//}
-//else {
-//    header("location:login.html");
-//}
+}
+else {
+  ?>
+
+   <script type="text/javascript">
+     window.location = "../uitloggen.php"
+   </script>
+  <?php
+}
     ?>

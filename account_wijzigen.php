@@ -1,18 +1,15 @@
 <?php
-session_start();
-$username = $_SESSION["gebruikersnaam"];
-$id = $_SESSION["id"];
-$naam = $_SESSION["naam"];
-$functie = $_SESSION["functie"];
-if ($functie == "1") 
+include '../connectie.php';
+include 'headercmsadmin.php';
+include 'beheerindex.php';
+if ($functie == "1")
     {
-    include 'connectie.php';
 
-    echo "<table>";
 
     $result = mysqli_query($con, "SELECT * FROM gebruikers");
-    echo "<a href='beheer.php'>back to menu</a>";
-    echo "<tabel>";
+    echo "<div class='content-display'>";
+
+    echo "<table class='table table-striped table-hover'>";
 
 
     while ($row = mysqli_fetch_array($result)) {
@@ -33,6 +30,7 @@ if ($functie == "1")
     }
 
     echo "</tabel>";
+    echo "</div>";
 
     if (isset($_POST['gegevenswijzigen'])) {
         $id = $_POST['gegevenswijzigen'];
@@ -41,12 +39,13 @@ if ($functie == "1")
         $row2 = mysqli_fetch_array($result2);
         ?>
         <form action="#" method="post">
-            <table>
+          <table class='table table-striped table-hover'>
+
                 <tr>
                     <td>
                         Gebruikersnaam:
                     </td>
-                    <td>	
+                    <td>
                         <input type="text" name="gebruikersnaam" id="gebruikersnaam" value="<?php echo $row2['gebruikersnaam'] ?>">
                     </td>
                 </tr>
@@ -84,7 +83,7 @@ if ($functie == "1")
                     </td>
                 </tr>
                 <tr>
-                    <td>	
+                    <td>
                     </td>
                     <td>
         <?php echo "<button type='submit' name='gegevensupdate' value={$row2['id']}>Wijzigen</button>"; ?>
@@ -102,13 +101,6 @@ if ($functie == "1")
     if (isset($_POST['gegevensupdate'])) {
         $id_wijzigen = $_POST['gegevensupdate'];
 
-        $con = mysqli_connect("localhost", "root", "");
-
-        if (!$con) {
-            die('Could not connect: ' . mysqli_error());
-        }
-
-        mysqli_select_db($con, "brandstof");
 
         $gebruikersnaam = $_POST['gebruikersnaam'];
         $wachtwoord = $_POST['wachtwoord'];
@@ -122,10 +114,23 @@ if ($functie == "1")
         $achternaam = mysqli_real_escape_string($con, $achternaam);
         $rol = mysqli_real_escape_string($con, $rol);
 
+        $wachtwoord = password_hash($wachtwoord, PASSWORD_BCRYPT);
+
         $query = mysqli_query($con, "UPDATE gebruikers SET gebruikersnaam='$gebruikersnaam', wachtwoord='$wachtwoord', naam='$naam', achternaam='$achternaam', rol='$rol' WHERE id = '$id_wijzigen'");
-        header("location:account_wijzigen.php");
+
+        ?>
+        <script type="text/javascript">
+          window.location = "account_wijzigen.php"
+        </script>
+        <?php
     }
+
+
 } else {
-    header("location:login.html");
+  ?>
+  <script type="text/javascript">
+    window.location = "../uitloggen.php"
+  </script>
+  <?php
 }
 ?>
