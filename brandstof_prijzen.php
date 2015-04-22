@@ -16,21 +16,24 @@ $rol = $_SESSION["rol"];
 
 <form class="form-horizontal" action="" method="post">
 <table>
+    <div class="form-group">
     <h1>Brandstof prijzen aanpassen</h1>
-                    <div class="form-group">
-                    <tr>Brandstof:
-                    <select name="brandstof">
-                    <option value="">Selecteer...</option>
+
+                    <tr>
+                    <select class="form-control" name="brandstof">
+                    <option value="">Brandstof type</option>
                     <option value="euro95">EURO 95</option>
                     <option value="diesel">Diesel</option>
                     <option value="lpg">LPG</option>
                     </select>
                     </tr>
-<tr><td>Prijs:</td><td></td><td><input style="<?php echo '' ?>" type="text" name="prijzen"></td></tr>
+                </br>
+<tr><input placeholder="Voer hier de nieuwe prijs in.." class="form-control" style="<?php echo '' ?>" type="text" name="prijzen"></td></tr>
 
 
 </table>
-<input type="submit" name="submit" value="verzenden" >
+</br>
+<input class="btn btn-success" type="submit" name="submit" value="verzenden" >
 <?php
 if(isset($_POST['submit'])){
     // MySQL stuff goes here
@@ -44,7 +47,7 @@ window.location = "brandstof_prijzen.php"
 
 }
 ?>
-
+</div>
 </form>
 
 
@@ -86,9 +89,9 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
-
 </div>
+
+
 
 
     <div class="col-lg-4 col-md-2 col-sm-4">
@@ -134,6 +137,7 @@ if($row = $results->num_rows > 0) {
 </table>
 </div>
 <div class="col-lg-2" col-md-2 col-sm-2>RECHTS</div>
+
 
 
 
