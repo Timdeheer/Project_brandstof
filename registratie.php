@@ -1,5 +1,5 @@
 <?php
-include '../connectie.php';
+include 'connectie.php';
 include 'headercmsadmin.php';
 include 'beheerindex.php';
 
