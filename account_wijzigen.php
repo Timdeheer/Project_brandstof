@@ -2,7 +2,13 @@
 include 'connectie.php';
 include 'headerbeheer.php';
 include 'beheerindex.php';
+?>
+<div class="row">
 
+    
+
+</div>
+<?php
     $result = mysqli_query($con, "SELECT * FROM gebruikers");
     echo "<div class='content-display'>";
 

@@ -38,7 +38,7 @@ $locatie = $_SESSION["locatie"];
         echo "</td>";
         echo "<td>";
         echo "<form action='#' method='post'>";
-        echo "<button type='submit' name='gegevenswijzigen' value={$row['id']}>Wijzigen</button>";
+        echo "<button class='btn btn-success' type='submit' name='gegevenswijzigen' value={$row['id']}>Wijzigen</button>";
         echo"</form>";
         echo "<td>";
         echo "</tr>";
@@ -63,7 +63,7 @@ $locatie = $_SESSION["locatie"];
                 <tr>
 
                     <td>
-                <button type='submit' name='update' value='<?php $row2['id']; ?>' class='btn btn-success btn-xs'>Wijzigen</button>
+                <button type="submit" name="update" value="<?php $row2['id'] ?>" class="btn btn-success btn-xs">Wijzigen</button>
 
                     </td>
                 </tr>
