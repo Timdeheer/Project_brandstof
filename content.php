@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'header.php';
 ?>
 
 <style type="text/css">
@@ -7,9 +8,11 @@ session_start();
 
 
 </style>
-
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+    <div class="col-lg-8" col-md-8 col-sm-8>
 <?php
-include 'header.php';
+
 $username = $_SESSION["gebruikersnaam"];
 $id = $_SESSION["id"];
 $naam = $_SESSION["naam"];
@@ -60,7 +63,7 @@ $locatie = $_SESSION["locatie"];
                 <tr>
 
                     <td>
-        <?php echo "<button type='submit' name='update' value={$row2['id']}>Wijzigen</button>"; ?>
+                <button type='submit' name='update' value='<?php $row2['id']; ?>' class='btn btn-success btn-xs'>Wijzigen</button>
 
                     </td>
                 </tr>
@@ -82,3 +85,6 @@ $locatie = $_SESSION["locatie"];
     }
 
 ?>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2"></div>
+</div>
