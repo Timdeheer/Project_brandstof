@@ -4,10 +4,53 @@ include 'headerbeheer.php';
 include 'beheerindex.php';
 
 ?>
-      <div class="content-display">
-      <form action="logo_wijzigen_cn.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="post-thumbnail">
-        <button type="submit" name="submit">Update</button>
-      </form>
+
+<style>
+    .fileUpload {
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+    }
+    .fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4"></div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="content-display">
+            <form action="logo_wijzigen_cn.php" method="post" enctype="multipart/form-data">
+
+                <input id="uploadFile"  onchange="pressed()"  placeholder="Kies bestand" disabled="disabled">
+                <div class="fileUpload btn btn-success">
+                    <span>Upload</span>
+                    <input type="file" class="upload" name="post-thumbnail">
+
+                </div>
+
+                <br>
+                <br>
+                <button type="submit" class='btn btn-success' name="submit">Update</button>
+
+            </form>
+        </div>
+
     </div>
+    <div class="col-lg-4 col-md-4 col-sm-4"></div>
+</div>
+     <script>
+    document.getElementById("uploadBtn").onchange = function () {
+        document.getElementById("uploadFile").value = this.value;
+    };
+
+</script>
 
