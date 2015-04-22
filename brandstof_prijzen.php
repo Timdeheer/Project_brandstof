@@ -1,17 +1,7 @@
-<<<<<<< HEAD
+
 <!doctype html>
 <html>
-<style>
-.recente_prijzen, td{
-    border: 1px solid black;
-}
-.recente_prijzen {
-    float:right;
-}
-thead {
-    font-weight:bold;
-}
-</style>
+
 <head>
 <meta charset="utf-8">
 <title>Brandstof prijzen aanpassen</title>
@@ -31,9 +21,7 @@ thead {
 <tr><td>Recente prijzen</td></tr>
 </thead>
 <tbody>
-<tr><td>
-=======
->>>>>>> origin/master
+<tr><td></td></tr></tbody></table>
 <?php
 Session_start();
 include 'header.php';
@@ -111,7 +99,7 @@ if (isset($_POST['submit'])) {
 
 
 
-	$query = "INSERT INTO `fuel` (`locatie_id`, `brandstof`, `prijzen`, `datum`)
+	$query = "INSERT INTO fuel (locatie_id, brandstof, prijzen, datum)
 	VALUES ('$locatie_id', '$brandstof', '$prijzen', CURRENT_TIMESTAMP )";
 //    $query_update_prijzen = "UPDATE `fuel` SET ($locatieid = `locatie_id`, $brandstof = `brandstof`, $prijzen = `prijzen`) WHERE            $locatieid =`locatie_id`  ";
 
@@ -178,3 +166,5 @@ if($row = $results->num_rows > 0) {
 
 
 </div>
+</body>
+</html>
