@@ -1,58 +1,92 @@
+<!doctype html>
+<html>
+<style>
+.recente_prijzen, td{
+    border: 1px solid black;
+}
+.recente_prijzen {
+    float:right;
+}
+thead {
+    font-weight:bold;
+}
+</style>
+<head>
+<meta charset="utf-8">
+<title>Brandstof prijzen aanpassen</title>
+</head>
+
+<body>
+<table class="recente_prijzen">
+<thead>
+<tr><td>Recente prijzen</td></tr>
+</thead>
+<tbody>
+<tr><td>
 <?php
-Session_start();
-include 'header.php';
-$username = $_SESSION["gebruikersnaam"];
-$id = $_SESSION["id"];
-$naam = $_SESSION["naam"];
-$functie = $_SESSION["functie"];
-$locatie = $_SESSION["locatie"];
-$rol = $_SESSION["rol"];
+include 'connectie.php';
+$locatie_id = '2';
+$results = $con->query("SELECT * FROM fuel WHERE brandstof='DIESEL' ORDER BY datum DESC LIMIT 1");
+if($row = $results->num_rows > 0) {
+    while($row = $results->fetch_object()) {
+      echo $row->brandstof." ".$row->prijzen." ";
+    }
+}
 ?>
-<div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-2">LINKS</div>
-    <div class="col-lg-4 col-md-4 col-sm-4">
+</td></tr>
 
-
-
-<form class="form-horizontal" action="" method="post">
+<tr><td>
+<?php
+$results = $con->query("SELECT * FROM fuel WHERE brandstof='EURO95' ORDER BY datum DESC LIMIT 1");
+if($row = $results->num_rows > 0) {
+    while($row = $results->fetch_object()) {
+      echo $row->brandstof." ".$row->prijzen." ";
+    }
+}
+?>
+</td></tr>
+<tr><td>
+<?php
+$results = $con->query("SELECT * FROM fuel WHERE brandstof='LPG' ORDER BY datum DESC LIMIT 1");
+if($row = $results->num_rows > 0) {
+    while($row = $results->fetch_object()) {
+      echo $row->brandstof." ".$row->prijzen." ";
+    }
+}
+?>
+</td></tr>
+</tbody>
+</table>
+<h1>Brandstof prijzen aanpassen</h1>
+<form action="" method="post">
 <table>
-    <div class="form-group">
-    <h1>Brandstof prijzen aanpassen</h1>
 
-                    <tr>
-                    <select class="form-control" name="brandstof">
-                    <option value="">Brandstof type</option>
+                    <tr>Brandstof:
+                    <select name="brandstof">
+                    <option value="">Selecteer...</option>
                     <option value="euro95">EURO 95</option>
                     <option value="diesel">Diesel</option>
                     <option value="lpg">LPG</option>
                     </select>
                     </tr>
-                </br>
-<tr><input placeholder="Voer hier de nieuwe prijs in.." class="form-control" style="<?php echo '' ?>" type="text" name="prijzen"></td></tr>
+<tr><td>Prijs:</td><td></td><td><input style="<?php echo '' ?>" type="text" name="prijzen"></td></tr>
 
 
 </table>
-</br>
-<input class="btn btn-success" type="submit" name="submit" value="verzenden" >
+<input type="submit" name="submit" value="verzenden" >
 <?php
 if(isset($_POST['submit'])){
-    // MySQL stuff goes here
-    ?>
-    <script type="text/javascript">
-<!--
-window.location = "brandstof_prijzen.php"
-//-->
-</script>
-    <?php
-
+    header("Location: brandstof_prijzen.php");
+    exit;
 }
 ?>
-</div>
+
 </form>
 
 
 
-
+</body>
+</html>
 
 
 
@@ -89,56 +123,3 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-</div>
-
-
-
-
-    <div class="col-lg-4 col-md-2 col-sm-4">
-<table class="recente_prijzen">
-<thead>
-<tr><td>Recente prijzen</td></tr>
-</thead>
-<tbody>
-<tr><td>
-<?php
-include 'connectie.php';
-$locatie_id = $locatie;
-$results = $con->query("SELECT * FROM fuel WHERE brandstof='DIESEL' AND locatie_id='$locatie_id' ORDER BY datum DESC LIMIT 1");
-if($row = $results->num_rows > 0) {
-    while($row = $results->fetch_object()) {
-      echo $row->brandstof." ".$row->prijzen." ";
-    }
-}
-?>
-</td></tr>
-
-<tr><td>
-<?php
-$results = $con->query("SELECT * FROM fuel WHERE brandstof='EURO95' AND locatie_id='$locatie_id' ORDER BY datum DESC LIMIT 1");
-if($row = $results->num_rows > 0) {
-    while($row = $results->fetch_object()) {
-      echo $row->brandstof." ".$row->prijzen." ";
-    }
-}
-?>
-</td></tr>
-<tr><td>
-<?php
-$results = $con->query("SELECT * FROM fuel WHERE brandstof='LPG' AND locatie_id='$locatie_id' ORDER BY datum DESC LIMIT 1");
-if($row = $results->num_rows > 0) {
-    while($row = $results->fetch_object()) {
-      echo $row->brandstof." ".$row->prijzen." ";
-    }
-}
-?>
-</td></tr>
-</tbody>
-</table>
-</div>
-<div class="col-lg-2" col-md-2 col-sm-2>RECHTS</div>
-
-
-
-
-</div>
