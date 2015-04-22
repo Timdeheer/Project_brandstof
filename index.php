@@ -2,6 +2,19 @@
 $locatie_id='2';
 
 include 'connectie.php';
+
+//logo ophalen
+
+$sqli = "SELECT post_thumbnail from banners ORDER BY id DESC LIMIT 1";
+$result = mysqli_query($con,$sqli);
+while ($row = $result->fetch_assoc()) {
+
+    echo "<img src='{$row['post_thumbnail']}' alt='index_logo' class='img-rounded center-block img-responsive'>";
+
+}
+
+
+
 // begin content tekst
 $sql = "SELECT * FROM locatietext WHERE locatie = $locatie_id";
 $result = mysqli_query($con, $sql);

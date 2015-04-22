@@ -6,8 +6,8 @@ $locatie = 2;
 $imgName      = $con->real_escape_string($_FILES['post-thumbnail']['name']);
 $imgData      = $_FILES["post-thumbnail"]["tmp_name"];
 $imgType      = $con->real_escape_string($_FILES["post-thumbnail"]["type"]);
-$targetFolder = "assets/uploaded_images";
-$imageUrl     = "localhost/project_brandstof/assets/uploaded_images /".$imgName;
+$targetFolder = "assets/uploaded_images/";
+$imageUrl     = "assets/uploaded_images/".$imgName;
 
 print_r($_FILES['post-thumbnail']);
 
