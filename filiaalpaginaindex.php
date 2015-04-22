@@ -22,7 +22,7 @@ include 'header.php'
 
 
             <img src="assets/img/logo-brandstof.png" alt="login_logo" class="img-rounded center-block img-responsive">
-            <h3 class="text-success text-center">Welkom <?php echo $naam ?> op het Portaal van Tankstation!</h3>
+        <h3 class="text-success text-center">Welkom <?php echo $naam ?> op het Portaal van Tankstation!</h3>
 
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4"></div>

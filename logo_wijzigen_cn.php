@@ -1,5 +1,6 @@
 <?php
-include '../connectie.php';
+include 'connectie.php';
+include 'header.php';
 $locatie = 2;
 
 $imgName      = $con->real_escape_string($_FILES['post-thumbnail']['name']);

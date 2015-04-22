@@ -1,6 +1,6 @@
 <?php
 include 'connectie.php';
-include 'headercmsadmin.php';
+include 'headerbeheer.php';
 include 'beheerindex.php';
 
 ?>
