@@ -21,7 +21,13 @@
                 $_SESSION["rol"] = $row->rol;
                 $_SESSION["locatie"] = $row->locatie;
                 ob_start();
-                header("location:beheer.php");
+                if($row->functie == "1") {
+                    header("location:beheer.php");
+                }
+                else{
+                    header("location:filiaalpagina.php");
+
+                }
             }else {
                 echo "connection has failed";
             }

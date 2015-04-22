@@ -2,12 +2,7 @@
 include 'connectie.php';
 include 'headercmsadmin.php';
 include 'beheerindex.php';
-
-if($_SESSION['functie'] == "1"){
-  echo "<div class='content-display'>";
 ?>
-
-
 <h1>Account aanmaken</h1>
 <form action="registratie_cn.php" method="post">
     <table>
@@ -112,14 +107,3 @@ if($_SESSION['functie'] == "1"){
         </tr>
       </div>
     </table>
-    <?php
-}
-else {
-  ?>
-
-   <script type="text/javascript">
-     window.location = "../uitloggen.php"
-   </script>
-  <?php
-}
-    ?>

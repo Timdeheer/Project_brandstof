@@ -2,9 +2,6 @@
 include 'connectie.php';
 include 'headercmsadmin.php';
 include 'beheerindex.php';
-if ($functie = 1)
-    {
-
 
     $result = mysqli_query($con, "SELECT * FROM gebruikers");
     echo "<div class='content-display'>";
@@ -125,12 +122,4 @@ if ($functie = 1)
         <?php
     }
 
-
-} else {
-  ?>
-  <script type="text/javascript">
-    window.location = "uitloggen.php"
-  </script>
-  <?php
-}
 ?>
