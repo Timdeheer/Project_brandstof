@@ -16,6 +16,14 @@ thead {
 <title>Brandstof prijzen aanpassen</title>
 </head>
 
+
+
+
+<p>hallo</p>
+
+
+
+
 <body>
 <table class="recente_prijzen">
 <thead>
