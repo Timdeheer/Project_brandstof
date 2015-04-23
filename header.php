@@ -7,15 +7,16 @@ include 'connectie.php'
  ?>
 
 
-    <head>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.css">
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="assets/js/bootstrap.js"></script>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="assets/js/bootstrap.js"></script>
 
-    </head>
+</head>
 
-    <body>
+<body>
         <div class="container-fluid">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
