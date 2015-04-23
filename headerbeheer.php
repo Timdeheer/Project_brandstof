@@ -39,6 +39,9 @@ include 'connectie.php';
                     <li><a href="account_wijzigen.php">Account wijzigen</a></li>
                     <li><a href="content_wijzigen.php">Content wijzigen</a></li>
                     <li><a href="tijden_wijzigen.php">Tijden wijzigen</a></li>
+                    <li><a href="aanbieding_toevoegen.php">Aanbieding</a></li>
+                    <li><a href="product_toevoegen.php">Producten</a></li>
+                    <li><a href="producten.php">Producten lijst</a></li>
                     <li><a href="logo_wijzigen.php">Logo wijzigen</a></li>
                     <li><div class=""></div><a href="uitloggen.php"><button name="submit" type="submit" value="Logout" class="btn btn-success btn-xs">Uitloggen</button></a></li>
 
