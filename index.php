@@ -87,7 +87,7 @@ while ($row = $result->fetch_assoc()) {
 
 
 <!-- end prijzen -->
-        
+
 <div class="col-lg-4 col-md-4 col-sm-4"></div>
     </div>
     <div class="row">
@@ -130,6 +130,7 @@ while ($row = $result->fetch_assoc()) {
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <table class="table table-responsive">
+                <div class="text-center text-uppercase"><h4>Content Tankstation</h4></div>
                 <tr>
                     <td>
                         <?php
@@ -152,6 +153,38 @@ while ($row = $result->fetch_assoc()) {
             </table>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <h3>Aanbieding van de dag!</h3>
+            <?php
+            $results = $con->query("SELECT * FROM aanbiedingen  ORDER BY id DESC LIMIT 1");
+            if($row = $results->num_rows > 0) {
+            while($row = $results->fetch_object()) {
+            ?>
+            <table class="table table-responsive">
+                <tr>
+
+                    <?php
+                    echo "<td><img src='{$row->post_thumbnail}' alt='index_logo' class='img-rounded center-block img-responsive'></td>";
+
+                    echo "<h4><tr><td>". $row->productnaam . "</td></h4>";
+                    echo    " <h3><tr><td> ".$row->beschrijving."</td></tr></h3> ";
+                    echo   " <h3><tr><td> &euro; ".$row->prijs."</td></tr></h3> ";
+                    echo "<br>";
+                    }
+                    }
+
+
+
+                    ?>
+                </tr>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4"></div>
+
+
+
     </div>
 
 
