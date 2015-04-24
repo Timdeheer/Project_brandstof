@@ -1,21 +1,20 @@
 <?php
-
 session_start();
 $id = $_SESSION["id"];
 $locatie = $_SESSION["locatie"];
 $naam = $_SESSION["naam"];
+$functie = $_SESSION['functie'];
+if(isset($id) &&  $functie < 1) {
 
-include 'filiaalpaginaindex.php';
+
+    include 'filiaalpaginaindex.php';
 //index
 
 
-
-
-
-include 'connectie.php';
-$sql3 = "SELECT * FROM gebruikers WHERE id = $id";
-$result3 = mysqli_query($con, $sql3);
-$count3 = mysqli_num_rows($result3);
+    include 'connectie.php';
+    $sql3 = "SELECT * FROM gebruikers WHERE id = $id";
+    $result3 = mysqli_query($con, $sql3);
+    $count3 = mysqli_num_rows($result3);
 
 //if ($count3 > 0) {
 //    while ($row3 = mysqli_fetch_object($result3))
@@ -36,4 +35,11 @@ $count3 = mysqli_num_rows($result3);
 //        }
 //    }
 //}
+}
+else{
+    header("location:login.html");
+}
 ?>
+
+
+
