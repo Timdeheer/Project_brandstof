@@ -34,7 +34,7 @@ while ($row = $result->fetch_assoc()) {
 ?>
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
-            <table class="table table-responsive  text-center" style="background-color: lightgreen;color:white;">
+            <table class="table table-responsive  text-center" style="background-color: red;color:white;">
                 <tr>
                     <td>
                         <?php
@@ -52,7 +52,7 @@ while ($row = $result->fetch_assoc()) {
 
         <div class="col-lg-4 col-md-4 col-sm-4">
 
-            <table class="table table-responsive text-center"style="background-color: lightgreen;color:white;">
+            <table class="table table-responsive text-center"style="background-color: red;color:white;">
                 <tr>
                     <td>
                         <?php
@@ -68,7 +68,7 @@ while ($row = $result->fetch_assoc()) {
             </table>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
-            <table class="table table-responsive text-center"style="background-color: lightgreen;color:white;">
+    <table class="table table-responsive text-center"style="background-color: red;color:white;">
                 <tr>
                     <td>
                         <?php
@@ -186,5 +186,3 @@ while ($row = $result->fetch_assoc()) {
 
 
     </div>
-
-
