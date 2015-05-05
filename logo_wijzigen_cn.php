@@ -19,7 +19,7 @@ if ( isset($_POST['submit']) ) {
 <!--        <script type="text/javascript">-->
 <!--<!---->
 <!--window.location = "logo_wijzigen.php"-->
-<!--//-->-->
+<!--//-->
 <!--</script>-->
         <?php
     }

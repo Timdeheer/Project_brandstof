@@ -78,11 +78,10 @@ $locatie = $_SESSION["locatie"];
 
     if (isset($_POST['update'])) {
         $id_wijzigen = $_POST['update'];
-       	include 'connectie.php';
-
+        $locatie = $_SESSION["locatie"];
         $tekst = $_POST['tekst'];
 
-        $query = mysqli_query($con, "UPDATE locatietext SET tekst='$tekst' WHERE id = '$id_wijzigen'");
+        $query = mysqli_query($con, "UPDATE locatietext SET tekst='$tekst' WHERE locatie = '$locatie'");
 
 
         header("location:content.php");

@@ -3,6 +3,7 @@
 include 'connectie.php';
 include 'header.php';
 session_start();
+error_reporting(0);
 ?>
 <!doctype html>
 <html>
@@ -151,7 +152,9 @@ if (isset($_POST['submit'])) {
 //    $query_update_prijzen = "UPDATE `fuel` SET ($locatieid = `locatie_id`, $brandstof = `brandstof`, $prijzen = `prijzen`) WHERE            $locatieid =`locatie_id`  ";
 
     if(mysqli_query($con, $query)){
-        echo 'De Brandstofprijzen zijn up to date!';
+
+        echo 'De Brandstofprijzen zijn up to date klik op vernieuw om deze te zien!';
+        echo " <a href='brandstof_prijzen.php'>Vernieuw</a>";
         header( 'location:brandstof_prijzen.php');
     }else{
         echo mysqli_error($con);
