@@ -39,7 +39,7 @@ $locatie = $_SESSION["locatie"];
         echo "</td>";
         echo "<td>";
         echo "<form action='#' method='post'>";
-        echo "<button class='btn btn-success' type='submit' name='gegevenswijzigen' value={$row['id']}>Wijzigen</button>";
+        echo "<button class='btn btn-danger' type='submit' name='gegevenswijzigen' value={$row['id']}>Wijzigen</button>";
         echo"</form>";
         echo "<td>";
         echo "</tr>";

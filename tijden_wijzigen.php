@@ -27,7 +27,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo "</td>";
     echo "<td>";
     echo "<form action='#' method='post'>";
-    echo "<button type='submit' class='btn btn-success' name='locatie_keuze' value={$row['id']}>Wijzigen</button>";
+    echo "<button type='submit' class='btn btn-danger' name='locatie_keuze' value={$row['id']}>Wijzigen</button>";
     echo"</form>";
     echo "<td>";
     echo "</tr>";
@@ -77,7 +77,7 @@ if (isset($_POST['locatie_keuze'])) {
             <tr>
                 <td>
 
-                    <?php echo "<button type='submit' class='btn btn-success' name='update_prijzen' value={$row2['id']}>Wijzigen</button>"; ?>
+                    <?php echo "<button type='submit' class='btn btn-danger' name='update_prijzen' value={$row2['id']}>Wijzigen</button>"; ?>
                 </td>
                 <td>
 

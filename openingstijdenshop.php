@@ -43,7 +43,7 @@ include 'header.php';
                             echo "<form action='#' method='post'>";
                             echo "<div class='form-group'>";
 
-                            echo "<button class='btn btn-success btn-xs' type='submit' name='gegevenswijzigen' value={$row['id']}>Wijzigen</button>";
+                            echo "<button class='btn btn-danger btn-xs' type='submit' name='gegevenswijzigen' value={$row['id']}>Wijzigen</button>";
                             echo "</div>";
                             echo "</form>";
                             echo "<td>";
@@ -103,7 +103,7 @@ include 'header.php';
 
                         <tr>
                             <td>
-                                <?php echo "<button class='btn btn-success btn-xs' type='submit' name='update' value={$row2['id']}>Wijzigen</button>"; ?>
+                                <?php echo "<button class='btn btn-danger btn-xs' type='submit' name='update' value={$row2['id']}>Wijzigen</button>"; ?>
                             </td>
                             <td></td>
                             <td>
@@ -149,4 +149,3 @@ include 'header.php';
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4"></div>
 </div>
-

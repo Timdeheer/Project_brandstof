@@ -25,7 +25,7 @@ include 'beheerindex.php';
             echo "</td>";
             echo "<td>";
             echo "<form action='#' method='post'>";
-            echo "<button type='submit' name='gegevenswijzigen' class='btn btn-success' value='{$row['id']}'>Wijzigen</button>";
+            echo "<button type='submit' name='gegevenswijzigen' class='btn btn-danger' value='{$row['id']}'>Wijzigen</button>";
             echo"</form>";
             echo "<td>";
             echo "</tr>";
@@ -89,7 +89,7 @@ include 'beheerindex.php';
                     <td>
                     </td>
                     <td>
-                        <?php echo "<button type='submit' class='btn btn-success' name='gegevensupdate' value={$row2['id']}>Wijzigen</button>"; ?>
+                        <?php echo "<button type='submit' class='btn btn-danger' name='gegevensupdate' value={$row2['id']}>Wijzigen</button>"; ?>
 
                     </td>
                 </tr>

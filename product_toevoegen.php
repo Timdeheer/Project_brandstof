@@ -28,7 +28,7 @@
             <div class="form-group">
                 <table class="table table-responsive">
                     <tr><td><input id="uploadFile"  onchange="pressed()"  placeholder="Kies bestand" disabled="disabled">
-                            </td><td><div class="fileUpload btn btn-success">
+                    </td><td><div class="fileUpload btn btn-danger">
                                 <span>Upload</span>
                                 <input type="file" class="upload" id="post_thumbnail" name="post-thumbnail">
 
@@ -44,7 +44,7 @@
                     <br>
                     <br>
                 </table>
-                <button type="submit" class='btn btn-success form-control' name="submit">Update</button>
+                <button type="submit" class='btn btn-danger form-control' name="submit">Update</button>
             </div>
         </form>
 

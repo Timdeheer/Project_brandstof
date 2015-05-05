@@ -115,7 +115,7 @@ include 'beheerindex.php';
                     <td>
                     </td>
                     <td>
-                        <input type="submit" class="btn btn-success" value="aanmaken">
+                        <input type="submit" class="btn btn-danger" value="aanmaken">
                     </td>
                 </tr>
     </div>

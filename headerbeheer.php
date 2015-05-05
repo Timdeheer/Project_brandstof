@@ -26,7 +26,7 @@ include 'connectie.php';
                     <span class="icon-bar"></span>
                 </button>
 
-                <a href='beheer.php'><p class="navbar-brand" style="color:lightgreen">TANKSTATION</p></a>
+                <a href='beheer.php'><p class="navbar-brand" style="color:red" text-danger>TEXACO</p></a>
             </div>
 
 
@@ -43,7 +43,7 @@ include 'connectie.php';
                     <li><a href="product_toevoegen.php">Producten</a></li>
                     <li><a href="producten.php">Producten lijst</a></li>
                     <li><a href="logo_wijzigen.php">Logo wijzigen</a></li>
-                    <li><div class=""></div><a href="uitloggen.php"><button name="submit" type="submit" value="Logout" class="btn btn-success btn-xs">Uitloggen</button></a></li>
+                    <li><div class=""></div><a href="uitloggen.php"><button name="submit" type="submit" value="Logout" class="btn btn-danger btn-xs">Uitloggen</button></a></li>
 
                 </ul>
 

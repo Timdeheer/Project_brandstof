@@ -14,6 +14,7 @@ print_r($_FILES['post-thumbnail']);
 if ( isset($_POST['submit']) ) {
     if ($insert = $con->query("INSERT INTO banners (post_thumbnail) VALUES ('$imageUrl')")) {
         move_uploaded_file($imgData, "$targetFolder" . $imgName);
+        error_reporting(1);
         header("location:logo_wijzigen.php");
         ?>
 <!--        <script type="text/javascript">-->

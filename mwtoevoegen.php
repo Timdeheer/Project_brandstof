@@ -100,7 +100,7 @@ $locatie = $_SESSION["locatie"];
                 ?>
 </div>
 
-            <input  class="btn btn-success" type="submit" value="aanmaken">
+            <input  class="btn btn-danger" type="submit" value="aanmaken">
 
                 </form>
 </div>

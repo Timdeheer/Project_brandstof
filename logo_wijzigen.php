@@ -31,7 +31,7 @@ include 'beheerindex.php';
             <form action="logo_wijzigen_cn.php" method="post" enctype="multipart/form-data">
 
                 <input id="uploadFile"  onchange="pressed()"  placeholder="Kies bestand" disabled="disabled">
-                <div class="fileUpload btn btn-success">
+                <div class="fileUpload btn btn-danger">
                     <span>Upload</span>
                     <input type="file" class="upload" name="post-thumbnail">
 
@@ -39,7 +39,7 @@ include 'beheerindex.php';
 
                 <br>
                 <br>
-                <button type="submit" class='btn btn-success' name="submit">Update</button>
+                <button type="submit" class='btn btn-danger' name="submit">Update</button>
 
             </form>
         </div>
@@ -53,4 +53,3 @@ include 'beheerindex.php';
     };
 
 </script>
-

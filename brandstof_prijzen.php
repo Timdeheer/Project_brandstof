@@ -23,7 +23,7 @@ error_reporting(0);
             $result = mysqli_query($con,$sqli);
             while ($row = $result->fetch_assoc()) {
 
-                echo "<img src='assets/img/logo-brandstof.png' alt='index_logo' class='img-rounded center-block img-responsive'>";
+                echo "<img src='assets/img/texaco_petroleos.png' alt='index_logo' class='img-rounded center-block img-responsive'>";
 
             }?>
 
@@ -116,7 +116,7 @@ error_reporting(0);
 
 
         <div class="form-group">
-        <input type="submit" class="btn btn-success btn-xs form-control" name="submit" value="verzenden" >
+        <input type="submit" class="btn btn-danger btn-xs form-control" name="submit" value="verzenden" >
             </div>
 
 

@@ -29,7 +29,7 @@ include 'connectie.php'
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a href='filiaalpagina.php'><p class="navbar-brand" style="color:lightgreen">TANKSTATION</p></a>
+                        <a href='filiaalpagina.php'><p class="navbar-brand" text-danger style="color:red">TEXACO</p></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,7 +43,7 @@ include 'connectie.php'
                             <li><a href="aanbieding_toevoegen.php">Aanbieding</a></li>
                             <li><a href="openingstijdenshop.php">Openingstijden pomp</a></li>
                             <li><a href="brandstof_prijzen.php">Prijzen toevoegen</a></li>
-                            <li><div class=""></div><a href="uitloggen.php"><button name="submit" type="submit" value="Logout" class="btn btn-success btn-xs">Uitloggen</button></a></li>
+                            <li><div class=""></div><a href="uitloggen.php"><button name="submit" type="submit" value="Logout" class="btn btn-danger btn-xs">Uitloggen</button></a></li>
 
                         </ul>
 
