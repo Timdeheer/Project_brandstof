@@ -152,7 +152,7 @@ if (isset($_POST['submit'])) {
 
     if(mysqli_query($con, $query)){
         echo 'De Brandstofprijzen zijn up to date!';
-        header("location:brandstof_prijzen.php");
+        header( 'location:brandstof_prijzen.php');
     }else{
         echo mysqli_error($con);
     }
@@ -175,4 +175,3 @@ if (isset($_POST['submit'])) {
 
 </body>
 </html>
-

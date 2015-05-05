@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $naam = $_SESSION['naam'];
 $functie = $_SESSION['functie'];
 ?>
@@ -13,5 +13,3 @@ $functie = $_SESSION['functie'];
 
     </ul>
 </div>
-
-
