@@ -1,7 +1,7 @@
 <?php
 session_start();
 $functie = $_SESSION['functie'];
-if($functie > 0)
+if($functie > "0")
 include 'headerbeheer.php';
 
 else{

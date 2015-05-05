@@ -1,6 +1,13 @@
 <?php
 include 'connectie.php';
-include 'headerbeheer.php';
+session_start();
+$functie = $_SESSION['functie'];
+if($functie > "0")
+    include 'headerbeheer.php';
+
+else{
+    include 'header.php';
+}
 include 'beheerindex.php';
 
 ?>

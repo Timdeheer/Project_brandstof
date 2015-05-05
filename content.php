@@ -1,6 +1,12 @@
 <?php
 session_start();
-include 'header.php';
+$functie = $_SESSION['functie'];
+if($functie > "0")
+    include 'headerbeheer.php';
+
+else{
+    include 'header.php';
+}
 ?>
 
 <style type="text/css">
