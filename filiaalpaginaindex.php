@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <!-- Latest compiled and minified JavaScript -->
@@ -13,7 +13,7 @@
 
 <body>
 <?php
-session_start();
+
 $functie = $_SESSION['functie'];
 if($functie > "0")
     include 'headerbeheer.php';

@@ -13,6 +13,10 @@ include 'connectie.php'
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </head>
 
@@ -50,6 +54,7 @@ include 'connectie.php'
 
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
+
             </nav>
 
     </body>
